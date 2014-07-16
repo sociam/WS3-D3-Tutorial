@@ -1,0 +1,39 @@
+* { 
+	box-sizing:border-box;
+	font-family:'helvetica-neue';
+	font-weight:100;
+}
+
+body {
+   padding:30px;
+   height:100%;
+}
+
+svg {
+   width:100%;
+   height:80%;
+   border:1px solid #eee;
+   box-shadow: 5px 5px 5px #eee;
+}
+circle.pt {
+	fill:#bff;
+	stroke:none;
+}
+circle.pt.selected {
+	stroke-width:1px;
+	stroke:#2ff;
+	fill:white;
+}
+.tweet-display {
+	position:absolute;
+	left:20px; right:20px;
+	top:10px;
+}
+.yaxis path, .xaxis path {
+	stroke-width:1px;
+	stroke:#222;
+	fill:none;
+}
+.xaxis, .yaxis { 
+	font-size:6pt;
+}
