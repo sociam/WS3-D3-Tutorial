@@ -27,8 +27,6 @@ var plot = function(nodes, links) {
   var width = $(document).width(),
       height = $(document).height();
 
-  console.log(nodes);
-
   var force = d3.layout.force()
       .nodes(d3.values(nodes))
       .links(links)
@@ -90,13 +88,16 @@ var plot = function(nodes, links) {
 
 
 $.get('/bieber.json').then(function(tweets) { 
-    data = tweets.statuses;
-    window.biebs = tweets;
+
     var nodes = {}, links = [];
 
     tweets.statuses.map(function(tweet) { 
        var people = [tweet.user.screen_name].concat(tweet.entities.user_mentions.map(function(mention) { return mention.screen_name ; }));
+
+       // make the nodes
        people.map(function(p) { return nodes[p] || (nodes[p] = { name: p }); });
+       
+       // make the links
        people.slice(1).map(function(recipient) { 
          var link = links.filter(function(l) { 
             return l.source == tweet.user.screen_name && l.target == recipient; 
