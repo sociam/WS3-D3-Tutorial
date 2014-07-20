@@ -1,6 +1,6 @@
 * { 
 	box-sizing:border-box;
-	font-family:'helvetica-neue';
+	font-family:'helvetica-neue', 'helvetica';
 	font-weight:100;
 }
 
@@ -28,12 +28,17 @@ circle.pt.selected {
 	position:absolute;
 	left:20px; right:20px;
 	top:10px;
+	font-size:12pt;
 }
+.tweet-display .author { color: #2ef; }
+.tweet-display * { display: inline-block; }
+
+
 .yaxis path, .xaxis path {
 	stroke-width:1px;
 	stroke:#222;
 	fill:none;
 }
 .xaxis, .yaxis { 
-	font-size:6pt;
+	font-size:10pt;
 }

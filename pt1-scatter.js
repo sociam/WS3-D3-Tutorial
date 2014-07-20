@@ -37,7 +37,7 @@ jQuery(document).ready(function() {
 			.append('circle')
 			.attr('cx', function(t) { return xscale(xval(t)); })
 			.attr('cy', function(t) { return yscale(yval(t)); })
-			.attr('r', 3)
+			.attr('r', 5)
 			.attr('class', 'pt');
  
 		// let's add interactivity
@@ -50,12 +50,12 @@ jQuery(document).ready(function() {
 			var target = evt.target;
 			console.log('target ', target);
 			$('.tweet-display .text').html(target.__data__.text);
+			$('.tweet-display .author').html("@"+target.__data__.user.screen_name);
 			$(target).attr('class', 'pt selected');
-
 		});
 		$('circle.pt').on('mouseout', function(evt) { 
 			var target = evt.target;
-			$('.tweet-display .text').html('');
+			$('.tweet-display .text, .tweet-display .author').html('');
 			$(target).attr('class', 'pt');
 		});
 
