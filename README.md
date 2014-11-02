@@ -11,4 +11,4 @@ Please see the attached pages/PDF file called 'exercises' for the actual exercis
 Feel free to use these exercises in your own courses; but do me the favour of [giving me bugfixes and improvements](https://github.com/sociam/WS3-D3-Tutorial) so that I can incorporate them in my lectures as well! 
 
 Best
-eMax (@emax)
+eMax ([Twitter @emax](@emax))
